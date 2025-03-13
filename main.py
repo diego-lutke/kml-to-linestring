@@ -20,8 +20,8 @@ for pm in folder.Placemark:
         coords = coords.replace('\n', '').replace('\t', '')
         for coord in coords.split(" "):  # split coordinates based on commas (excluding preceding 0's)
             if coord != "":
-                lat = coord.split(",")[1]
-                lon = coord.split(",")[0]
+                lat = coord.split(",")[0]
+                lon = coord.split(",")[1]
                 lat = round(float(lat), 5)
                 lon = round(float(lon), 5)
                 lat_lon.append([lat, lon])
